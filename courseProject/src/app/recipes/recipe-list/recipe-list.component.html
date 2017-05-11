@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-xs-12">
+		<button class="btn btn-primary">New Recipee</button>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-xs-12">
+		<!-- This is the component of recipe item that exists within app/recipes/recipe-list/recipe-item -->
+		<!-- We are getting the recipes from the component of recipe list and looping through it and binding each recipe to the recipe element from the recipe item using the input directive. -->
+		<app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl" ></app-recipe-item>
+	</div>
+</div>
+

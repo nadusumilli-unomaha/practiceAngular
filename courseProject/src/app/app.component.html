@@ -1,0 +1,17 @@
+<!-- This is the navbar or the header of the page. -->
+<app-header (componentSelected)="onNavigation($event)"></app-header>
+
+<!-- This is where the main content is going to be existing! -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>
+			  {{title}}
+			</h1>
+			<!-- This is the recipes component that is present in the app/recipes folder. -->
+			<app-recipes *ngIf="loadedComponent === 'recipe'"></app-recipes>
+			<!-- This is the recipes component that is present in the app/shopping-list folder. -->
+			<app-shopping-list *ngIf="loadedComponent !== 'recipe'"></app-shopping-list>
+		</div>
+	</div>
+</div>
